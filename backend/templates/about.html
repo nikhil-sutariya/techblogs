@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block nav_link_about %}active{% endblock nav_link_about %}
+{% block content %}
+<nav aria-label="breadcrumb" data-aos="fade-up" data-aos-duration="1200">
+	<ol class="breadcrumb mt-5">
+		<li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="fas fa-home mr-2"></i>Home</a></li>
+		<li class="breadcrumb-item active" aria-current="page">About us</li>
+	</ol>
+</nav>
+<div class="header mt-3" data-aos="fade-up" data-aos-duration="1500">
+	<h4><b>About us page</b></h4>
+	<hr class="header-hr"><br>
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="about-img text-center">
+				<img src="{% static 'img/team.png' %}" alt="about tech blogs">
+			</div>
+		</div>
+		<div class="col-lg-8">
+			<div class="about-text">
+				<h3>Who we are?</h3><hr>
+				<p>We empower people with web development literacy, so they can read beginner friendly blogs about web development technologies, ask better questions and make better sense of the world. This passion powers our work and our community service.</p><br>
+				<h5>Thank you for your support! &#10084;&#65039;</h5><br>
+			</div>
+		</div>
+	</div><hr><br>
+	<div class="founder">
+		<div class="founder-head text-center" data-aos="fade-up" data-aos-duration="1500">
+			<h4 class="mt-3"><b>Founder of Tech Blogs</b></h4>
+			<hr class="body-hr"><i class="fa fa-star fa-lg"></i><hr class="body-hr">
+		</div>
+		<div class="founder-img text-center" data-aos="fade-up" data-aos-duration="1500">
+			<img src="{% static 'img/founder.jpg' %}">
+		</div><br>
+		<div class="founder-det" data-aos="fade-up" data-aos-duration="1500">
+			<h4><b>Nikhil Sutariya</b></h4>
+			<p>Hello guys, I'm Nikhil Sutariya founder of Tech Blogs. Hope you are good and learn many things from Tech Blogs. Professionally I'm a Python developer. When I started to dive into web development I face many problems at the beginning. Later on daily practice and actively learning makes me an experienced developer. Once I was a beginner, I was stuck at stages to create web projects, so I decided to make a website that helps beginners and who want to start, learn and ready deep diving into web development.<br></p><h5>Keep supporting! &#10084;&#65039;</h5>
+			<br>
+			<div class="details">
+				<h5 class="mb-3">Contact me on :</h5>
+				<a href="http://nikhilsutariya.epizy.com/?i=1" target="_blank"><i class="fas fa-globe mr-2"></i></a>
+				<a href="https://www.linkedin.com/in/nikhil-sutariya-0a2727b8/" target="_blank"><i class="fab fa-linkedin mr-2"></i></a>
+				<a href="#https://www.instagram.com/_nikhil_sutariya/" target="_blank"><i class="fab fa-github mr-2"></i></a>
+				<a href="https://github.com/nikhil-sutariya" target="_blank"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

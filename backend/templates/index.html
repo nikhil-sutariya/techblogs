@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block nav_link_index %}active{% endblock %}
+{% block content %}
+<div class="container header mt-5">
+	<h4 data-aos="fade-up" data-aos-duration="1000"><b>Welcome to Tech Blogs</b></h4>
+	<div class="info-part" data-aos="fade-up" data-aos-duration="1000">
+		<p>Hello guys, welcome to <b>Tech blogs.</b> We love to help beginners to learn web development's basic stuff simply and efficiently.</p>
+	</div><br>
+	<div class="categories mb-5" data-aos="fade-up" data-aos-duration="1000">
+		<h6 class="me-3">Categories&nbsp; :&nbsp;</h6>
+		{% for ct in categories %}
+		<div class="category-link">
+			<a href="{% url 'categories' ct.name %}" class="cat-link">{{ ct.name }}</a>
+		</div>
+		{% endfor %}
+		<br><br>
+		<hr>
+	</div>
+	<!-- Latest Posts Part -->
+	<div class="first-part" data-aos="fade-up" data-aos-duration="1000">
+		<h4><b>Latest blogs</b></h4>
+		<hr class="header-hr">
+		{% for bg in blog %}
+		<div class="post mt-3">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-12">
+					<a href="{% url 'blog' bg.slug %}"><img src="{{ bg.image.url }}" alt="{{ bg.image_alt }}"></a>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-12 col-12">
+					<a href="{% url 'blog' bg.slug %}" class="blog-title">
+						<h5><b>{{ bg.title }}</b></h5>
+					</a>
+					{{ bg.blog_text|safe|slice:"210" }}...
+					<div class="post-read-part mt-3">
+						<a href="{% url 'blog' bg.slug %}"><button class="btn btn-primary">Read more..</button></a>
+						<p class="post-date">{{ bg.date_upload|date }}</p>
+					</div>
+				</div>
+			</div>
+		</div><hr class="blog-hr">
+		{% endfor %}
+	</div><br>
+</div>
+{% endblock %}

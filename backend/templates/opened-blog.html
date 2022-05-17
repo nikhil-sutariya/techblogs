@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="header mt-3" data-aos="fade-up" data-aos-duration="1000">
+	<div class="categories mt-2">
+		<h6 class="me-3">Categories&nbsp; :&nbsp;</h6>
+		{% for ct in categories %}
+		<div class="category-link">
+			<a href="{% url 'categories' ct.name %}" class="cat-link">{{ ct.name }}</a>
+			<!-- <a href="{% url 'categories' ct.name %}" class="cat-link {% if ct.name == 'Django' %}cat-active{% elif ct.name == 'Html' %}cat-active{% else %}{% endif %}">{{ ct.name }}</a> -->
+		</div>
+		{% endfor %}
+		<br>
+		<hr>
+	</div>
+	<div class="message">
+        {% for mg in messages %}
+        <div class="alert alert-success" role="alert">
+            <p>{{ mg }}
+            	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            	    <span aria-hidden="true">&times;</span>
+            	</button>
+			</p>
+        </div>
+        {% endfor %}
+    </div>
+	{% for bg in blog %}
+	<h4 class="mt-2"><b>{{ bg.title }}</b></h4><br>
+	<div class="article">
+		<img src="{{ bg.image.url }}" alt="{{ bg.image_alt }}"><br><br>
+		{{ bg.blog_text|safe }}
+	</div>
+	{% endfor %}
+	<hr>
+	<div class="reply-part" data-aos="fade-up" data-aos-duration="1000">
+		<div class="reply-heading">
+			<h5><b>We love to hear from our adoring fans. &nbsp;Leave a reply -</b></h5><hr class="header-hr">
+		</div><br>
+		<div class="reply-form">
+			<form method="POST">
+				{% csrf_token %}
+				<div class="form-group">
+                    <label for="name" class="form-control-label mb-3">Name :</label><br>
+    				<input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-gorup mt-4">
+                    <label for="email" class="form-control-label mb-3">Email Address :</label><br>
+    				<input type="email" name="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                </div>
+                <div class="from-group mt-4">
+                    <label for="comment " class="form-control-label mb-3">Comment :</label><br>
+                    <textarea rows="7" name="comment" id="comment" class="form-control" required></textarea>
+                </div><br>
+				<button type="submit" class="btn btn-primary mt-3">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

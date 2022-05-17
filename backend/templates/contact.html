@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block nav_link_contact %}active{% endblock nav_link_contact %}
+{% block content %}
+<nav aria-label="breadcrumb" data-aos="fade-up" data-aos-duration="1200">
+	<ol class="breadcrumb mt-5">
+		<li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="fas fa-home mr-2"></i>Home</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Contact us</li>
+	</ol>
+</nav>
+<div class="header mt-3" data-aos="fade-up" data-aos-duration="1500">
+    <div class="message">
+        {% for mg in messages %}
+            <div class="alert alert-success" role="alert">
+                <p>{{ mg }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+    <h4><b>Contact us</b></h4><hr class="header-hr">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="about-img text-center">
+                <img src="{% static 'img/support.png' %}" alt="about tech blogs">
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="contact-part">
+                <div class="reply-heading">
+                    <h5><b>We love to communicate with our fans!<br><br>Drop the message for us -</b></h5>
+                </div><br>
+                <div class="contact-form">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name" class="form-control-label mb-3">Name :</label><br>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-gorup mt-4">
+                            <label for="email" class="form-control-label mb-3">Email Address :</label><br>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="from-group mt-4">
+                            <label for="message " class="form-control-label mb-3">Message :</label><br>
+                            <textarea rows="7" name="message" id="message" class="form-control" required></textarea>
+                        </div><br>
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button><br>
+                        <div class="about-text mt-4">
+                            <h5>Thank you for your support! &#10084;&#65039;</h5>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
