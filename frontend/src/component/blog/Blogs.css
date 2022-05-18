@@ -1,0 +1,47 @@
+.header .article img{
+	width: 75%;
+	height: auto;
+}
+
+.header .article p{
+	padding: 10px 25px 10px 0px;
+	font-size: 14px;
+	line-height: 2;
+	letter-spacing: 1px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.header .reply-part{
+	padding: 10px;
+	font-size: 16px;
+}
+
+.header pre{
+	background-color: #ccc;
+	padding: 15px 20px;
+	font-size: 16px;
+	line-height: 2;
+	letter-spacing: 1.2px;
+}
+
+.header .reply-part .reply-form input[type="text"], .header .reply-part .reply-form input[type="email"], .header .reply-part .reply-form textarea{
+	background-color: transparent !important;
+	border: 1px solid #ccc !important;
+	border-radius: 5px !important;
+	width: 50% !important;
+	padding: 7px 0 7px 15px;
+	font-size: 16px;
+}
+
+.header .reply-part .reply-form .btn-primary{
+	border: 1px solid #0a1a29;
+	border-radius: 3px;
+	background-color: transparent;
+	color: #0a1a29;
+	font-size: 14px;
+}
+
+::placeholder{
+	font-size: 14px;
+}

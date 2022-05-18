@@ -55,15 +55,15 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-    )
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework.renderers.JSONRenderer',
+#     )
+# }
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:4200',
+    'http://localhost:3000',
 )
 
 ROOT_URLCONF = 'tech_blog_site.urls'

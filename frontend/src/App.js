@@ -3,14 +3,20 @@ import './App.css';
 import { About } from './component/about/About';
 import { Contact } from './component/contact/Contact';
 import { Home } from './component/home/Home';
+import { Blogs } from './component/blog/Blogs';
+import { Nav } from './component/navigation/Nav';
+import { Page404 } from './component/404/Page404';
 
 function App() {
   return (
     <>
+    <Nav />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="*" element={<Page404 />} />
+      <Route exact path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/blog/:id" element={<Blogs />} />
     </Routes>
     </>
   );

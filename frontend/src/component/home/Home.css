@@ -1,0 +1,95 @@
+.header .categories h6{
+	display: inline-block;
+}
+
+.header .info-part p{
+	padding: 10px 25px 10px 0px;
+	font-size: 15px;
+	line-height: 2;
+	letter-spacing: 1px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.header .categories .category-link{
+	display: inline-block;
+}
+
+.header .categories .category-link .cat-link{
+	font-size: 16px;
+	margin: 0 10px;
+	color: #1f4e7a;
+	font-weight: 600;
+    text-decoration: none;
+}
+
+.header .categories .category-link a:hover{
+	text-decoration: none;
+	color: #0a1a29;
+	font-weight: 600;
+}
+
+.header .categories .category-link .cat-active{
+	font-size: 15px;
+	color: #ffffff;
+	border: 1px solid #10273d;
+	background-color: #10273d;
+	border-radius: 20px;
+	padding: 8px 20px;
+	font-weight: 400;
+}
+
+.header .categories .category-link .cat-active:hover{
+	color:#fff;
+	font-weight: 400;
+}
+
+.header .first-part hr{
+	width: 97%;
+}
+
+.header .first-part .post img{
+	width: 260px;
+	height: 160px;
+	padding-right: 10px;
+}
+
+.header .first-part .post h5{
+	line-height: 1.5;
+}
+
+.header .first-part .post a{
+	color: #1f4e7a;
+	text-decoration: none;
+}
+
+.header .first-part .post a:hover{
+	color: #153451;
+	text-decoration: none;
+}
+
+.header .first-part .post p{
+	font-size: 14px;
+	line-height: 1.7;
+	letter-spacing: 1px;
+	text-align: justify;
+	text-justify: inter-word;
+	padding: 5px 25px 0 0;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+
+.header .first-part .post .post-read-part button{
+	float: left;
+	border: 1px solid #153451;
+	border-radius: 2px;
+	background-color: transparent;
+	color: #153451;
+	font-size: 14px;
+}
+
+.header .first-part .post .post-read-part .post-date{
+	float: right;
+}
