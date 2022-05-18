@@ -22,7 +22,7 @@
 	padding: 15px 20px;
 	font-size: 16px;
 	line-height: 2;
-	letter-spacing: 1.2px;
+	letter-spacing: 1px;
 }
 
 .header .reply-part .reply-form input[type="text"], .header .reply-part .reply-form input[type="email"], .header .reply-part .reply-form textarea{

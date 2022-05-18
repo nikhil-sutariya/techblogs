@@ -6,6 +6,7 @@ import { Home } from './component/home/Home';
 import { Blogs } from './component/blog/Blogs';
 import { Nav } from './component/navigation/Nav';
 import { Page404 } from './component/404/Page404';
+import { Category } from './component/category/Category';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog/:id" element={<Blogs />} />
+      <Route path="/category/:name" element={<Category />} />
     </Routes>
     </>
   );

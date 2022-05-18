@@ -8,19 +8,28 @@ import { Link } from 'react-router-dom';
 export const Home = () => {
 
   const [data, setData] = useState([])
+  const [category, setCategory] = useState([])
 
-  const getData = async () =>{
+  const getData = () =>{
     axios.get('http://127.0.0.1:8000/api/blog/')
     .then((response) => {
       setData(response.data);
     })
   }
+
+  const getCategory = () => {
+    axios.get('http://127.0.0.1:8000/api/category/')
+    .then((response) => {
+      setCategory(response.data);
+    })
+  }
   
   useEffect(() => {
       getData();
+      getCategory();
     }, []
   );
-  
+    
   return (
     <>
       <div className='container header mt-5'>
@@ -31,7 +40,11 @@ export const Home = () => {
         <div className="categories mb-5">
           <h6 className="me-3 mb-3">Categories&nbsp; :&nbsp;</h6>
             <div className="category-link">
-              <a className='cat-link'>Django</a>
+              {
+                category.map((d) => (
+                  <Link activeClassName="cat-active" to={`/category/${d.name}`} className='cat-link'>{d.name}</Link>
+                ))
+              }
             </div>
           <hr />
         </div>
@@ -43,7 +56,7 @@ export const Home = () => {
               {data.map((blog) => (
                 <>
                   <div className="col-lg-3 col-md-3 col-sm-12 col-12">
-                  <Link to={`/blog/${blog.id}`}><img src={blog.image} alt-text={blog.image_alt} /></Link>
+                    <Link to={`/blog/${blog.id}`}><img src={blog.image} alt-text={blog.image_alt} /></Link>
                   </div>
                   <div className="col-lg-9 col-md-9 col-sm-12 col-12">
                     <Link to={`/blog/${blog.id}`} className="blog-title">
