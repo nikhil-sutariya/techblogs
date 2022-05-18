@@ -1,0 +1,70 @@
+.breadcrumb{
+	background-color: transparent;
+	font-size: 14px;
+}
+
+.breadcrumb .breadcrumb-item a{
+	color: #1f4e7a;
+}
+
+.breadcrumb .breadcrumb-item a:hover{
+	text-decoration: none;
+}
+
+.header .about-img img{
+	max-width: 75%
+}
+
+.header .about-text p{
+	padding: 10px 25px 10px 0px;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 1px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.header .founder{
+	margin-top: 2em
+}
+
+.header .founder .founder-img img{
+	width: 25%;
+	border-radius: 50%;
+}
+
+.header .founder .details a{
+	text-decoration: none;
+	color: #0a1a29 !important;
+}
+
+.header .founder .founder-head .body-hr{
+	height: 2px;
+	margin: 30px auto !important; 
+	background-color: #1f4e7a;
+	width: 10%;
+	display: inline-block;
+}
+
+.header .founder .founder-head i{
+	color: #1f4e7a;
+	position: relative;
+	top: -25px;
+	margin: 0 15px;
+}
+
+.header .founder .founder-det p{
+	padding: 10px 25px 10px 0px;
+	font-size: 16px;
+	line-height: 2;
+	letter-spacing: 1px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.header-hr{
+	width: 25% !important;
+	height: 2px !important;
+	margin: 20px 0;
+	background-color: #1f4e7a !important;
+}

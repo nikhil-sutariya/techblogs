@@ -1,0 +1,22 @@
+.navbar{
+	box-shadow: -1px 3px 6px rgba(0,0,0,0.12) !important;
+	background-color: #10273d !important;
+}
+
+.navbar .navbar-brand{
+	width: 25%;
+}
+
+.navbar img{
+	width: 50%;
+}
+
+.navbar-nav{
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	margin-top: 10px;
+}
+
+#nav-icon{
+	margin: 0px 10px 0px 10px;
+}

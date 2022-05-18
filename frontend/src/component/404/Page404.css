@@ -1,0 +1,23 @@
+.page-404{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+  
+.page-404 button{
+    border: 3px solid #ddd;
+    border-radius: 20px;
+    padding: 3px 20px;
+    margin-top: 20px;
+}
+  
+.page-404 button a{
+    text-decoration: none;
+    color: #000;
+}
+  

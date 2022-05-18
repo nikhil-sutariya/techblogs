@@ -1,0 +1,21 @@
+.header .contact-part{
+	padding: 10px;
+	font-size: 16px;
+}
+
+.header .contact-part .contact-form input[type="text"], .header .contact-part .contact-form input[type="email"], .header .contact-part .contact-form textarea{
+	background-color: transparent;
+	border: 1px solid #ccc !important;
+	border-radius: 5px !important;
+	width: 100% !important;
+	padding: 7px 0 7px 15px;
+	font-size: 16px;
+}
+
+.header .contact-part .contact-form .btn-primary{
+	border: 1px solid #0a1a29;
+	border-radius: 3px;
+	background-color: transparent;
+	color: #0a1a29;
+	font-size: 14px;
+}
